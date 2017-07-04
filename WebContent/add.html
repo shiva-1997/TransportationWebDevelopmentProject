@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>admin add</title>
+<style>
+body
+{
+text-align:center;
+}
+
+</style>
+<script type="text/javascript">
+function validate()
+{
+	var numb=add.no.value; 
+	var pat1=/^\w{3,15}$/;  
+	var sorc=add.src.value;
+	var desti=add.dest.value;
+	if(numb==""||sorc==""||desti=="")
+	{
+	window.alert("enter all fields");
+	return false;
+	}
+	if(!(pat1.test(sorc)))
+	{ 
+		window.alert("invalid source");
+	    return false;
+    }  
+    
+	if(!(pat1.test(desti)))
+	{ 
+		window.alert("invalid Destination");
+	    return false;
+    }  
+   
+    
+  	if((!(pat1.test(numb))))
+  		{
+  		window.alert("invalid number");
+  		return false;
+  		}
+}	
+</script>
+</head>
+<body>
+<br/>
+<form method="post" name="add" action="add.jsp" onsubmit="return validate()">
+Number:<input type="text" name="no">
+<br/><br/>
+Source:<input type="text" name="src">
+<br/><br/>
+Destination:<input type="text" name="dest">
+<br/><br/>
+Type:<select name="type">
+<option>Standard</option>
+<option>Delux</option>
+<option>AC</option>
+</select>
+<br/><br/>
+<input type="submit" value="Add">
+</form>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>admin add</title>
+<style>
+body
+{
+text-align:center;
+}
+</style>
+</head>
+<body>
+<br/>
+<form method="post" name="add" action="add.jsp" onsubmit="return validate()">
+
+Time from:
+<input type="text" name="tof">
+<br/><br>
+Time to:
+<input type="text" name="tot">
+<br/><br/>
+Source:<input type="text" name="src">
+<br/><br/>
+Destination:<input type="text" name="dest">
+<br/><br/>
+Type:<select name="type">
+<option>Standard</option>
+<option>Delux</option>
+<option>AC</option>
+</select>
+<br/><br/>
+<input type="Submit" value="check">
+</form>
+</body>
+</html>

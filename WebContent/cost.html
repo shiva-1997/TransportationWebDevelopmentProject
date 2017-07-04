@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>admin add</title>
+<style>
+body
+{
+text-align:center;
+}
+<script type="text/javascript">
+
+var distance=add.dist.value;
+var typo=add.type.value;
+var val;
+if(typo.equals(standard))
+{
+val=5*distance;
+window.alert("The estimated cost is"+val);
+return true;
+}
+
+
+
+
+</style>
+</head>
+<body>
+<br/>
+<form method="post" target=_parent>
+Distance:<input type="text" name="dist">
+<br/><br/>
+Type:<select name="type">
+<option>standard</option>
+<option>delux</option>
+<option>ac</option>
+</select>
+<br/><br/>
+<input type="submit" value="Add">
+</form>
+</body>
+</html>

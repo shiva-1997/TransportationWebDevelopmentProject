@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>delete</title>
+<style>
+body
+{
+text-align:center;
+}
+</style>
+<script type="text/javascript">
+function validate()
+{
+	var numb=air.no.value; 
+	var pat1=/^\w{3,15}$/;  
+	if(numb==""||!(pat1.equals(numb)))
+		{
+		window.alert("invalid number");
+		return false;
+		}
+		}
+		</script>
+</head>
+<body>
+<br/>
+<form method="post" name="air" action="delete.jsp" onsubmit="return validate()">
+Number:<input type="text" name="no">
+<br/><br/>
+<input type="submit" value="Delete">
+</form>
+</body>
+</html>
